@@ -13,7 +13,7 @@
         <h2 class="text-center text-2xl font-semibold mb-8">Dashboard Penjualan</h2>
         <ul>
             <li class="mb-4">
-                <a href="{{ url('home') }}" class="text-lg hover:text-blue-400">Home</a>
+                <a href="{{ url('contoh') }}" class="text-lg hover:text-blue-400">Home</a>
             </li>
             <li class="mb-4">
                 <a href="{{ url('product') }}" class="text-lg hover:text-blue-400">Produk</a>

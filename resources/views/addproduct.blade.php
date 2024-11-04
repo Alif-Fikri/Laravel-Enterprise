@@ -16,7 +16,7 @@
                 <a href="{{ url('home') }}" class="text-lg hover:text-blue-400">Home</a>
             </li>
             <li class="mb-4">
-                <a href="{{ url('produk') }}" class="text-lg hover:text-blue-400">Produk</a>
+                <a href="{{ url('product') }}" class="text-lg hover:text-blue-400">Produk</a>
             </li>
             <li class="mb-4">
                 <a href="#" class="text-lg hover:text-blue-400">Penjualan</a>
