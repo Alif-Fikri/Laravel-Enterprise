@@ -1,4 +1,4 @@
-Basic CRUD Laravel
+Basic CRUD Laravel with tailwind css
 ![image](https://github.com/user-attachments/assets/b5c33068-568c-4564-91cb-35f916d2cc0c)
 Home Page
 
