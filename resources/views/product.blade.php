@@ -45,7 +45,7 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
     @foreach ($product as $item)
     <div class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-200 w-70" style="height: 400px;">
-        <img src="https://via.placeholder.com/200" alt="{{ $item->nama_produk }}" class="w-full h-48 object-cover mb-4">
+        <img src="{{ url('storage/public/images'. $item->image)}}" alt="{{ $item->nama_produk }}" class="w-full h-48 object-cover mb-4">
         <h3 class="text-xl font-semibold mb-2">{{ $item->nama_produk }}</h3>
         <p class="text-green-500 font-bold mb-2">Rp {{ number_format($item->harga, 0, ',', '.') }}</p>
         <p class="text-sm text-gray-600 mb-4">{{ $item->deskripsi }}</p>

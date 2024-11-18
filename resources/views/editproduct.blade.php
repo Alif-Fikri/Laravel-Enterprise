@@ -38,7 +38,7 @@
         </header>
 
         <!-- Edit Product Form -->
-        <form action="{{ url('product/edit/' . $ubahproduk->kode_produk) }}" method="POST" class="bg-white p-6 rounded-lg shadow-lg">
+        <form action="{{ url('product/edit/' . $ubahproduk->kode_produk) }}" method="POST" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-lg">
             @csrf
             @method('PUT')
             
@@ -62,6 +62,11 @@
                 <input type="text" name="jumlah_produk" class="form-control w-full mt-2 p-2 border rounded" required value="{{ $ubahproduk->jumlah_produk }}">
             </div>
 
+            </div>
+            <label for="image" class="block text-sm font-medium text-gray-700">Gambar</label>
+            <input type="file" name="image" id="image" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+            <div>
+
             <div class="flex justify-end">
                 <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-colors duration-200">
                     Update Product
@@ -69,9 +74,6 @@
             </div>
         </form>
     </div>
-    
-    <p class="absolute left-1/2 transform -translate-x-1/2 bottom-10 text-gray-500 text-sm">
-        &copy; 2024 Aplikasi Penjualan. All rights reserved.
-    </p>
+
 </body>
 </html>
