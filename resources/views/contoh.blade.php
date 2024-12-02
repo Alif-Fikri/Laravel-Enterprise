@@ -40,11 +40,11 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <div class="bg-white p-6 rounded-lg shadow-md text-center">
                 <h3 class="text-xl font-semibold text-gray-700 mb-2">Total Produk</h3>
-                <p id="total-produks" class="text-2xl font-bold text-green-500">{{ $totalproduks }}</p>
+                <p id="total-produks" class="text-2xl font-bold text-green-500">{{ $totalProducts }}</p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-md text-center">
                 <h3 class="text-xl font-semibold text-gray-700 mb-2">Penjualan Hari Ini</h3>
-                <p id="sales-today" class="text-2xl font-bold text-green-500">{{ $salestoday }}</p>
+                <p id="sales-today" class="text-2xl font-bold text-green-500">{{ $salesToday }}</p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-md text-center">
                 <h3 class="text-xl font-semibold text-gray-700 mb-2">Total Pendapatan</h3>
@@ -61,10 +61,16 @@
             <span class="block sm:inline">A simple primary alert—check it out!</span>
         </div>
 
-        <!-- Sales Chart -->
-        <div id="chart" class="bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Grafik Penjualan Bulanan</h2>
-            <canvas id="salesChart"></canvas>
+<!-- Sales Chart -->
+<div id="chart" class="bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold text-gray-700 mb-4">Grafik Penjualan Bulanan</h2>
+    {!! $chart->container() !!} <!-- Menampilkan Kontainer Grafik -->
+</div>
+
+<!-- Script untuk ApexCharts -->
+<script src="{{ $chart->cdn() }}"></script>
+{{ $chart->script() }}
+
         </div>
     </div>
 
