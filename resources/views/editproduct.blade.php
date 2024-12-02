@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Product</title>
+    <title>Edit Produk</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans bg-gray-100 min-h-screen flex flex-col">
@@ -16,13 +16,13 @@
                 <a href="{{ url('contoh') }}" class="text-lg hover:text-blue-400">Home</a>
             </li>
             <li class="mb-4">
-                <a href="{{ url('product') }}" class="text-lg hover:text-blue-400">Produk</a>
+                <a href="{{ url('produk') }}" class="text-lg hover:text-blue-400">Produk</a>
             </li>
             <li class="mb-4">
                 <a href="#" class="text-lg hover:text-blue-400">Penjualan</a>
             </li>
             <li class="mb-4">
-                <a href="#" class="text-lg hover:text-blue-400">Laporan</a>
+                <a href="{{url('laporan')}}" class="text-lg hover:text-blue-400">Laporan</a>
             </li>
             <li class="mb-4">
                 <a href="#" class="text-lg hover:text-blue-400">Pengaturan</a>
@@ -37,8 +37,8 @@
             <p class="text-1xl font-sans text-gray-700">Ubah detail produk di bawah ini.</p>
         </header>
 
-        <!-- Edit Product Form -->
-        <form action="{{ url('product/edit/' . $ubahproduk->kode_produk) }}" method="POST" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-lg">
+        <!-- Edit Produk Form -->
+        <form action="{{ url('produk/edit/' . $ubahproduk->kode_produk) }}" method="POST" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-lg">
             @csrf
             @method('PUT')
             
@@ -62,14 +62,16 @@
                 <input type="text" name="jumlah_produk" class="form-control w-full mt-2 p-2 border rounded" required value="{{ $ubahproduk->jumlah_produk }}">
             </div>
 
+            <div class="mb-4">
+                <label for="image" class="block text-gray-700 font-semibold">Gambar</label>
+                <div class="relative">
+                    <input type="file" name="image" id="image" class="form-control w-full mt-2 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
             </div>
-            <label for="image" class="block text-sm font-medium text-gray-700">Gambar</label>
-            <input type="file" name="image" id="image" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-            <div>
 
             <div class="flex justify-end">
                 <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-colors duration-200">
-                    Update Product
+                    Update Produk
                 </button>
             </div>
         </form>

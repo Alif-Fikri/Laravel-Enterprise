@@ -8,7 +8,7 @@ class contohcontroller extends Controller
     public function tampilcontoh()
     {
         $data = [
-            'totalproducts'=> 310,
+            'totalproduks'=> 310,
             'salestoday'=> 100,
             'totalrevenue'=> 'Rp 50,000,000',
             'registereduser'=> 350,

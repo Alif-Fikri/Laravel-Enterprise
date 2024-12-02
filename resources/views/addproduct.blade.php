@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Product</title>
+    <title>Add Produk</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans bg-gray-100 min-h-screen flex flex-col">
@@ -16,13 +16,13 @@
                 <a href="{{ url('contoh') }}" class="text-lg hover:text-blue-400">Home</a>
             </li>
             <li class="mb-4">
-                <a href="{{ url('product') }}" class="text-lg hover:text-blue-400">Produk</a>
+                <a href="{{ url('produk') }}" class="text-lg hover:text-blue-400">Produk</a>
             </li>
             <li class="mb-4">
                 <a href="#" class="text-lg hover:text-blue-400">Penjualan</a>
             </li>
             <li class="mb-4">
-                <a href="#" class="text-lg hover:text-blue-400">Laporan</a>
+                <a href="{{url('laporan')}} "class="text-lg hover:text-blue-400">Laporan</a>
             </li>
             <li class="mb-4">
                 <a href="#" class="text-lg hover:text-blue-400">Pengaturan</a>
@@ -33,11 +33,11 @@
     <!-- Main Content -->
     <div class="flex-1 p-8 ml-64">
         <header class="mb-8">
-            <h1 class="text-3xl font-bold text-gray-700">Add Product</h1>
-            <p class="text-xl font-sans text-gray-700">Fill in the details to add a new product.</p>
+            <h1 class="text-3xl font-bold text-gray-700">Add Produk</h1>
+            <p class="text-xl font-sans text-gray-700">Fill in the details to add a new produk.</p>
         </header>
 
-        <!-- Product Form -->
+        <!-- Produk Form -->
         <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
             @if (session('success'))
                 <div class="bg-green-100 text-green-700 p-4 rounded mb-6">
@@ -45,7 +45,7 @@
                 </div>
             @endif
 
-            <form action="{{ url('/product/add') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
+            <form action="{{ url('/produk/add') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
                 @csrf
 
                 <div>
