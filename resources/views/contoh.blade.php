@@ -16,13 +16,13 @@
                 <a href="{{ url('contoh') }}" class="text-lg hover:text-blue-400">Home</a>
             </li>
             <li class="mb-4">
-                <a href="{{ url('product') }}" class="text-lg hover:text-blue-400">Produk</a>
+                <a href="{{ url('produk') }}" class="text-lg hover:text-blue-400">Produk</a>
             </li>
             <li class="mb-4">
                 <a href="#" class="text-lg hover:text-blue-400">Penjualan</a>
             </li>
             <li class="mb-4">
-                <a href="#" class="text-lg hover:text-blue-400">Laporan</a>
+                <a href="{{url('laporan')}} "class="text-lg hover:text-blue-400">Laporan</a>
             </li>
             <li class="mb-4">
                 <a href="#" class="text-lg hover:text-blue-400">Pengaturan</a>
@@ -40,7 +40,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <div class="bg-white p-6 rounded-lg shadow-md text-center">
                 <h3 class="text-xl font-semibold text-gray-700 mb-2">Total Produk</h3>
-                <p id="total-products" class="text-2xl font-bold text-green-500">{{ $totalproducts }}</p>
+                <p id="total-produks" class="text-2xl font-bold text-green-500">{{ $totalproduks }}</p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-md text-center">
                 <h3 class="text-xl font-semibold text-gray-700 mb-2">Penjualan Hari Ini</h3>

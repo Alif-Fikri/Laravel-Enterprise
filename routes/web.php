@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\contohcontroller;
-use App\Http\Controllers\ProductController;
-use App\Models\Product;
+use App\Http\Controllers\ProdukController;
+use App\Models\Produk;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,12 +22,14 @@ Route::get('/deskripsi-pemrograman-enterprise', function () {
 // });
 Route::get('/contoh',[contohcontroller::class,'tampilcontoh']);
 
-// Route::get('/product', function () {
-//     return view('product');
+// Route::get('/produk', function () {
+//     return view('produk');
 // });
-Route::get('/product',[ProductController::class,'ViewProduct']);
-Route::get('/product/add',[ProductController::class,'ViewAddProduct']);
-Route::post('/product/add',[ProductController::class,'CreateProduct']);
-Route::delete('product/delete/{kode_produk}', [ProductController::class, 'DeleteProduct']);
-Route::get('/product/edit/{kode_produk}',[ProductController::class, 'ViewEditProduct']);
-Route::put('/product/edit/{kode_produk}',[ProductController::class, 'UpdateProduct']);
+Route::get('/produk',[ProdukController::class,'ViewProduk']);
+Route::get('/produk/add',[ProdukController::class,'ViewAddProduk']);
+Route::post('/produk/add',[ProdukController::class,'CreateProduk']);
+Route::delete('produk/delete/{kode_produk}', [ProdukController::class, 'DeleteProduk']);
+Route::get('/produk/edit/{kode_produk}',[ProdukController::class, 'ViewEditProduk']);
+Route::put('/produk/edit/{kode_produk}',[ProdukController::class, 'UpdateProduk']);
+Route::get('/laporan', [ProdukController::class, 'ViewLaporan']);
+Route::get('/report',[ProdukController::class, 'print']);
