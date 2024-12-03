@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\contohcontroller;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\AuthController;
 use App\Models\Produk;
 
 Route::get('/', function () {
@@ -33,3 +34,8 @@ Route::get('/produk/edit/{kode_produk}',[ProdukController::class, 'ViewEditProdu
 Route::put('/produk/edit/{kode_produk}',[ProdukController::class, 'UpdateProduk']);
 Route::get('/laporan', [ProdukController::class, 'ViewLaporan']);
 Route::get('/report',[ProdukController::class, 'print']);
+Route::get('/login', [AuthController::class, 'showLoginForm']);
+Route::post('/login', [AuthController::class, 'login']);
+Route::get('/register', [AuthController::class, 'showRegisterForm']);
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/logout', [AuthController::class, 'logout']);
